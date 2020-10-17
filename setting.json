@@ -2,7 +2,7 @@
     "use_cuda": true,
     "use_apex": false,
     "detect_anomaly": false,
-    "max_loop": 10,
+    "max_loop": 1000000,
     "start_level": 2,
     "max_level": 7,
     "batch_sizes": [64, 64, 32, 16, 8, 4, 2],
@@ -42,5 +42,5 @@
     ],
     "joinpath" : "../../gan/data/celeba",
     "target_type" : "*.*",
-    "debug_mode" : true
+    "debug_mode" : false
 }

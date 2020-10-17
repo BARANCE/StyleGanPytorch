@@ -8,7 +8,6 @@ import torchvision
 
 # My class
 from artifact import ArtifactMgr
-from model import Generator, Discriminator
 from data_loader import LabeledDataLoader
 from utils import create_z
 
