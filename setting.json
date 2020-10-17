@@ -1,0 +1,46 @@
+{
+    "use_cuda": true,
+    "use_apex": false,
+    "detect_anomaly": false,
+    "max_loop": 10,
+    "start_level": 2,
+    "max_level": 7,
+    "batch_sizes": [64, 64, 32, 16, 8, 4, 2],
+    "num_images_in_stage": 1200000,
+    "loss": "wgan",
+    "use_yuv": false,
+    "reset_optimizer": false,
+    "gs_beta": 1e-4,
+    "learning_rates": {
+        "latent_transformation": 0.00001,
+        "generator": 0.001,
+        "discriminator": 0.001
+    },
+    "network": {
+        "z_dim": 256,
+        "w_dim": 256,
+        "epsilon": 1e-8,
+        "normalize_latents": true,
+        "style_mixing_prob": 0.9,
+        "upsample_mode": "bilinear",
+        "use_labels": false,
+        "use_blur": false,
+        "use_noise": true,
+        "base_image_init": "one_normal"
+    },
+    "data_augmentation":{
+        "flip": true,
+        "color_shift": false
+    },
+    "save_steps":{
+        "image": 1000,
+        "model": 10000,
+        "histogram": 30000
+    },
+    "labels": [
+        "img_align_celeba"
+    ],
+    "joinpath" : "../../gan/data/celeba",
+    "target_type" : "*.*",
+    "debug_mode" : true
+}
